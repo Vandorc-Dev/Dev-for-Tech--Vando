@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema CRUD</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title"> Lista de Países na Copa</h1>
+    <form class="form-add" action="javascript:void(0);" , method="POST" onsubmit="app.Add()">
+        <input class="input-text" type="text" id="add-name" placeholder="Novo País">
+        <input class="input-btn" type="submit" value="Adicionar">
+    </form>
+    <div id="spoiler" role="aria-hidden">
+        <form action="javascript:void(0)" , method="POST" id="saveEdit">
+            <input class="input-text" type="text" id="edit-name">
+            <input class="input-btn" type="submit" value="Editar"/><a onclick="CloseInput()" aria-label="Close">&#10006</a>
+        </form>
+    </div>
+    <p id="counter"></p>
+    <table>
+        <tr>
+            <th>NOMES DOS PAÍSES</th>
+        </tr>
+        <tbody id="countries">
+        </tbody>
+    </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
